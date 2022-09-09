@@ -38,7 +38,7 @@ variable username {}
 variable password {}
 ```
 
-**inputs.tfvars**
+**inputs.auto.tfvars**
 ```terraform
 bigip = "10.1.1.9:443"
 username = "admin"
