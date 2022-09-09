@@ -12,7 +12,7 @@
 **on Terraform:**
 
 - [ ] use of F5 bigip provider version 1.15.0 minimal
-- [ ] use of Hashicorp version followinf [Link](https://clouddocs.f5.com/products/orchestration/terraform/latest/userguide/overview.html#releases-and-versioning)
+- [ ] use of Hashicorp version following [Link](https://clouddocs.f5.com/products/orchestration/terraform/latest/userguide/overview.html#releases-and-versioning)
 
 
 
