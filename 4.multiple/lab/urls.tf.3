@@ -1,0 +1,6 @@
+data "bigip_waf_entity_url" "U1" {
+  name		              	= "/U1"
+  type                        	= "explicit"
+  perform_staging             	= false
+  signature_overrides_disable 	= [200003068]
+}

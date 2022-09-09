@@ -1,0 +1,13 @@
+data "bigip_waf_pb_suggestions" "S6_03JUL20221800_P1" {
+  provider	         = bigip.prod1
+  policy_name            = "scenario6"
+  partition              = "Common"
+  minimum_learning_score = 10
+}
+
+data "bigip_waf_pb_suggestions" "S6_03JUL20221800_P2" {
+  provider	         = bigip.prod2
+  policy_name            = "scenario6"
+  partition              = "Common"
+  minimum_learning_score = 10
+}

@@ -1,0 +1,24 @@
+terraform {
+  required_providers {
+    bigip = {
+      source = "F5Networks/bigip"
+      version = "1.15.0"
+    }
+  }
+}
+provider "bigip" {
+  address  = var.bigip
+  username = var.username
+  password = var.password
+}
+
+resource "bigip_waf_policy" "this" {
+  partition                 = "Common"
+  name                      = "scenario2"
+  policy_id                 = "EdchwjSqo9cFtYP-iWUJmw"
+  template_name             = "POLICY_TEMPLATE_RAPID_DEPLOYMENT"
+  policy_import_json        = file("${path.module}/importedWAFPolicy.json")
+  parameters                = [data.bigip_waf_entity_parameter.P1.json]
+  urls                      = [data.bigip_waf_entity_url.U1.json, data.bigip_waf_entity_url.U2.json]
+  signatures                = [data.bigip_waf_signatures.S1.json, data.bigip_waf_signatures.S2.json]
+}

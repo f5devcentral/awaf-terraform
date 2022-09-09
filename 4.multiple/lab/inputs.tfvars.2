@@ -1,0 +1,36 @@
+qa_bigip = "10.1.1.9:443"
+prod_bigip = "10.1.1.8:443"
+username = "admin"
+password = "A7U+=$vJ"
+signatures = {
+    200101559 = {
+        signature_id    = 200101559
+        description     = "src http: (Header)"
+        enabled         = true
+        perform_staging = false
+    }
+    200101558 = {
+        signature_id    = 200101558
+        description     = "src http: (Parameter)"
+        enabled         = true
+        perform_staging = false
+    }
+    200003067 = {
+        signature_id    = 200003067
+        description     = "\"/..namedfork/data\" execution attempt (Headers)"
+        enabled         = true
+        perform_staging = false
+    }
+    200003066 = {
+        signature_id    = 200003066
+        description     = "\"/..namedfork/data\" execution attempt (Parameters)"
+        enabled         = true
+        perform_staging = false
+    }
+    200003068 = {
+        signature_id    = 200003068
+        description     = "\"/..namedfork/data\" execution attempt (URI)"
+        enabled         = true
+        perform_staging = false
+    }
+}

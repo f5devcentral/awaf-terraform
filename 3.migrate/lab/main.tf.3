@@ -1,0 +1,34 @@
+terraform {
+  required_providers {
+    bigip = {
+      source = "F5Networks/bigip"
+      version = "1.15"
+    }
+  }
+}
+provider "bigip" {
+  alias    = "old"
+  address  = var.previous_bigip
+  username = var.username
+  password = var.password
+}
+provider "bigip" {
+  alias    = "new"
+  address  = var.new_bigip
+  username = var.username
+  password = var.password
+}
+
+
+resource "bigip_waf_policy" "migrated" {
+  provider	           = bigip.new
+  partition            = "Common"
+  name                 = "scenario3"
+  policy_id            = "YiEQ4l1Fw1U9UnB2-mTKWA"
+  template_name        = "POLICY_TEMPLATE_COMPREHENSIVE"
+  type                 = "security"
+  policy_import_json   = file("${path.module}/currentWAFPolicy.json")
+  parameters           = [data.bigip_waf_entity_parameter.P1.json]
+  urls                 = [data.bigip_waf_entity_url.U1.json, data.bigip_waf_entity_url.U2.json]
+  signatures       = [data.bigip_waf_signatures.S1.json, data.bigip_waf_signatures.S2.json]
+}

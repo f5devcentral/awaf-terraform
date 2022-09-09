@@ -1,0 +1,10 @@
+data "bigip_waf_pb_suggestions" "AUG3rd20221715" {
+  provider	         = bigip.prod
+  policy_name            = "scenario5"
+  partition              = "Common"
+  minimum_learning_score = 100
+}
+
+output "AUG3rd20221715" {
+	value	= data.bigip_waf_pb_suggestions.AUG3rd20221715.json
+}

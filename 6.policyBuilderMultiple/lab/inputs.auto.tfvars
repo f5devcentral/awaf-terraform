@@ -1,0 +1,5 @@
+prod_dc1_bigip = "10.1.1.8"
+prod_cloud_bigip = "10.1.1.7"
+qa_bigip = "10.1.1.9"
+username = "admin"
+password = "A7U+=$vJ"
