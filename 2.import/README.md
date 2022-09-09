@@ -12,13 +12,13 @@ So the goal here is to **import** the current policy, which will be our current 
 
  - [ ] version 16.1 minimal
  - [ ] credentials with REST API access
- - [ ] /Common/scenario2 WAF policy (Rapid deployment template) created
+ - [ ] /Common/scenario2 WAF policy (Rapid deployment template) already created
 
 
 **on Terraform:**
 
  - [ ] use of F5 bigip provider version 1.15.0 minimal
- - [ ] use of Hashicorp version followinf [Link](https://clouddocs.f5.com/products/orchestration/terraform/latest/userguide/overview.html#releases-and-versioning)
+ - [ ] use of Hashicorp version following [Link](https://clouddocs.f5.com/products/orchestration/terraform/latest/userguide/overview.html#releases-and-versioning)
 
 
 
